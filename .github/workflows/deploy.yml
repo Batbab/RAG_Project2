@@ -587,7 +587,7 @@ jobs:
           echo ""
           echo "📋 Re-upload Response:"
           echo "$UPLOAD2_JSON" | jq '.'
-          echo ""
+          echo " "
 
           # Verify cache hit from S3
           STORAGE_BACKEND2=$(echo "$UPLOAD2_JSON" | jq -r '.storage_backend // "unknown"')
