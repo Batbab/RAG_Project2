@@ -22,8 +22,8 @@
 set -e  # Exit on error
 
 # Configuration
-AWS_ACCOUNT_ID="685057748560"
-AWS_REGION="us-east-1"
+AWS_ACCOUNT_ID='716147851038'
+AWS_REGION='ap-south-1'
 ECR_REGISTRY="${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com"
 ECR_REPOSITORY="lambda-python-deps"
 IMAGE_TAG="3.12"
@@ -47,6 +47,7 @@ echo ""
 
 docker build \
   --platform linux/amd64 \
+  --provenance=false \
   -t "${FULL_IMAGE_URI}" \
   -f Dockerfile.lambda.base \
   .
