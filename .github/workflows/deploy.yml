@@ -113,7 +113,7 @@ jobs:
         run: |
           echo "✅ Successfully logged into ECR!"
           echo "Registry: ${{ steps.login-ecr.outputs.registry }}"
-          echo ""
+          echo " "
 
       - name: Check and build base image if needed
         env:
