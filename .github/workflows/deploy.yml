@@ -193,7 +193,7 @@ jobs:
           echo "🔨 Building Docker image..."
           echo "   Platform: linux/amd64"
           echo "   Image: $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
-          echo " "
+          echo ""
 
           docker build \
             --platform linux/amd64 \
